@@ -19,6 +19,7 @@ public class User implements Serializable {
 	@Column(name = "name",unique=true)
 	private String name;
 	
+	
 	@Column(name = "type")
 	private String type;
 	
