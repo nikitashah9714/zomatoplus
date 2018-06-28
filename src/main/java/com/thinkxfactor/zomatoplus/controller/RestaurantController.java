@@ -61,13 +61,13 @@ public class RestaurantController {
 	//This is IOC with DI(Dependency Injection)
 	private RestaurantRepository restaurantRepository;
 	
-	@PostMapping("/addRestaurant")
+	@PostMapping("/add")
 	public Restaurant addRestaurant(@RequestBody Restaurant restaurant) {
 		Restaurant persistedRestaurant = restaurantRepository.save(restaurant);
 		return persistedRestaurant;
 	}
 	
-	@GetMapping("/getallRestaurant")
+	@GetMapping("/getAll")
 	public List<Restaurant> getall(){
 		List<Restaurant> listofrestaurants = restaurantRepository.findAll();
 		return listofrestaurants;

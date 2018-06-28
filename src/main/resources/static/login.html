@@ -1,0 +1,52 @@
+<div class="well">
+	<form novalidate>
+		<table cellpadding="100">
+		
+			<tr>
+				<td>Enter Valid Name</td>
+				<td><input type="text" ng-model="user.name"></td>
+			</tr>
+			
+			<tr>
+				<td>Enter your Password</td>
+				<td><input type="text" ng-model="user.password"></td>
+			</tr>
+
+			
+			<tr>
+				<td><button ng-click="userLogin()">LogIn</button></td>
+			</tr>
+		</table>
+
+	<p>loginDetails = {{user}}</p>
+
+	<div class="clearfix"></div>
+	<table class="table table-strip table-hover" data-ng-init="fetchUser()">
+
+		<tr style="background-color: #8FBC8F">
+			<td><b>Name</b></td>
+			<td><b>Type</b></td>
+			<td><b>Mobile</b></td>
+			<td><b>Address</b></td>
+			<td><b>Password</b></td>
+			<td><b>Landmark</b></td>
+			<td><b>Pincode</b></td>
+			
+		</tr>
+		<tr ng-repeat="user in users">
+		<td>{{user.name}}</td>
+			<td>{{user.type}}</td>
+			<td>{{user.mobile}}</td>
+			<td>{{user.address}}</td>
+			<td>{{user.password}}</td>
+			<td>{{user.landmark}}</td>
+			<td>{{user.pincode}}</td>
+			
+		</tr>
+	</table>
+
+</div>
+
+
+
+

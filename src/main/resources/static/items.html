@@ -1,0 +1,56 @@
+<div class="well">
+	<form novalidate>
+	<h2>Items</h2>
+		<table cellpadding="100">
+		
+			<tr>
+				<td>RestaurantID</td>
+				<td><input type="text" ng-model="item.restaurantid"></td>
+			</tr>
+			
+			<tr>
+				<td>Name</td>
+				<td><input type="text" ng-model="item.name"></td>
+			</tr>
+
+			<tr>
+				<td>Price</td>
+				<td><input type="text" ng-model="item.price"></td>
+			</tr>
+
+			<tr>
+				<td>Description</td>
+				<td><input type="text" ng-model="item.description"></td>
+			</tr>
+			
+			<tr>
+				<td><button ng-click="saveItem()">Save Item</button></td>
+			</tr>
+		</table>
+</form>
+	<p>newItem = {{item}}</p>
+
+	<div class="clearfix"></div>
+	<table class="table table-strip table-hover" data-ng-init="fetchItem()">
+
+		<tr style="background-color: #8FBC8F">
+			<td><b>RestaurantID</b></td>
+			<td><b>Name</b></td>
+			<td><b>Price</b></td>
+			<td><b>Description</b></td>
+			
+		</tr>
+		<tr ng-repeat="item in items">
+			<td>{{item.restaurantid}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.price}}</td>
+			<td>{{item.description}}</td>
+			
+		</tr>
+	</table>
+
+</div>
+
+
+
+

@@ -1,0 +1,95 @@
+<div class="well">
+	<form novalidate>
+	<h2>SignUp Here</h2>
+		<table cellpadding="100">
+			<tr>
+				<td>Name</td>
+				<td><input type="text" ng-model="user.name"></td>
+			</tr>
+
+			<tr>
+				<td>Type</td>
+				<td><input type="text" ng-model="user.type"></td>
+			</tr>
+
+			<tr>
+				<td>Mobile</td>
+				<td><input type="text" ng-model="user.mobile"></td>
+			</tr>
+
+			<tr>
+				<td>Address</td>
+				<td><input type="text" ng-model="user.address"></td>
+			</tr>
+			
+			<tr>
+				<td>Password</td>
+				<td><input type="text" ng-model="user.password"></td>
+			</tr>
+
+			<tr>
+				<td>Landmark</td>
+				<td><input type="text" ng-model="user.landmark"></td>
+			</tr>
+
+			<tr>
+				<td>Pincode</td>
+				<td><input type="text" ng-model="user.pincode"></td>
+			</tr>
+
+			<tr>
+				<td><button ng-click="saveUser()">SignUp User</button></td>
+			</tr>
+		</table>
+		</form>
+<div class = "well">
+<form novalidate>
+<h2>Quick LogIn</h2>
+<table cellpadding="100">
+<tr>
+				<td>Enter Valid Name</td>
+				<td><input type="text" ng-model="user.name"></td>
+			</tr>
+			
+			<tr>
+				<td>Enter your Password</td>
+				<td><input type="text" ng-model="user.password"></td>
+			</tr>
+
+			
+			<tr>
+				<td><button ng-click="login()">LogIn</button></td>
+			</tr>
+		</table>
+	</form>
+
+	<p>newUser = {{user}}</p>
+
+	<div class="clearfix"></div>
+	<table class="table table-strip table-hover" data-ng-init="fetchUser()">
+
+		<tr style="background-color: #8FBC8F">
+			<td><b>Name</b></td>
+			<td><b>Type</b></td>
+			<td><b>Mobile</b></td>
+			<td><b>Address</b></td>
+			<td><b>Password</b></td>
+			<td><b>Landmark</b></td>
+			<td><b>Pincode</b></td>
+		</tr>
+		<tr ng-repeat="user in users">
+			<td>{{user.name}}</td>
+			<td>{{user.type}}</td>
+			<td>{{user.mobile}}</td>
+			<td>{{user.address}}</td>
+			<td>{{user.password}}</td>
+			<td>{{user.landmark}}</td>
+			<td>{{user.pincode}}</td>
+		</tr>
+	</table>
+
+</div>
+
+
+
+

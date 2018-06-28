@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.thinkxfactor.zomatoplus.models.Items;
 import com.thinkxfactor.zomatoplus.models.User;
 import com.thinkxfactor.zomatoplus.repository.UserRepository;
 
@@ -91,12 +92,12 @@ public class UserController {
 		return listofusers;
 	}
 	
-	@PostMapping("/userLogin") 
+	@PostMapping("/login") 
 	//This API will take only the name and password and give the entire details
 	//In post mapping always use RequestBody
 	public User userLogin(@RequestBody User user) { 
 		return userRepository.findByNameAndPassword(user.getName(),user.getPassword());
+		
 	}
-	
 	
 }
